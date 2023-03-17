@@ -1,64 +1,77 @@
 
-# A Practical Workflow for Data Science Projects
+# DS105L - Week 09 live experiments
 
-This project is intended as a template structure for data science projects. Its main intended use is for teams within organizations but we see no reason why you would not benefit from it even if you are coding solo, participating in a data hackathon or are in an academic group, doing exploratory, statistical analysis or algorithm modelling.
+This repository is part of LSE [DS105L 2022/23](https://lse-dsi.github.io/DS105/2023/), for a lecture entitled "🔀 **Merge operations** & 📦 **practical tips for code organisation**". 
 
-This is a standalone **template project** that can be used as a starting point for any data science project. It is not a framework, a library, or a package. It is a template that you can use to start your own project. It is not intended to be a one-size-fits-all solution, but rather a starting point for you to build your own project structure.
+The major focus will be on how to work effectively as a group using GitHub, based on the feedback I received from [Shuyu](https://lse-dsi.github.io/DS105/2023/courserep.html) and general interactions with students over Slack/Office Hours.
 
-_If you like this project, please consider giving it a ⭐️!_
+I could have taken a passive approach and just demonstrate things to you, but I would rather transform this into a workshop where you can learn while practicing.
 
-# 👥 **Team**
+Here is how it's going to work:
 
-- [Jon](http://github.com/jonjoncardoso) as the core developer
+<details><summary><strong>Part ONE</strong></summary>
+  
+# Part ONE
 
-**People who have contributed to this course in the past:**
+<details><summary><strong>⚙️ Setup</strong></summary>
+  
+<p></p>
+  
+1. I will create a repository from the [jonjoncardoso/data-science-workflow](https://github.com/jonjoncardoso/data-science-workflow) template and I will edit the README.md to remove the template-related text.
 
-- [Karina Moura](https://github.com/kvmoura). _A stellar project manager!_
-- [Natalia Del Coco](https://github.com/NataliaDelCoco). _She is taking her van to the mountains for a while._
-- [Sara Luxmoore](https://github.com/SaraLuxmoore). _She can be seen doing cool research-related stuff in Italy these days._
+2. I will add a Jupyter Notebook with some web scraping code that is not greatly optimised to use pandas as we have been learning in this course...
+    
+</details>
 
-# Initial repository setup
+<details><summary><strong>📋 Create an issue</strong></summary>
+<p></p>
 
-Follow the instructions below to make use of this template.
+3. I will create a [GitHub Issue](https://docs.github.com/en/issues) with a **feature request** to optimise the code.
+4. Anyone in the audience will be welcome to **comment** on this GitHub issue with suggestions for code optimisation. 
+5. Once we found a solution that we're happy about, we will be ready to close the issue. But I won't close it straightaway!
 
-1. Create a new repository on GitHub using this template. You can do this by clicking on the green "Use this template" button on the top right of this page. 
+</details>
+  
+<details><summary><strong>🌴 Branching</strong></summary>
+<p></p>
 
-    ![Illustration of how to use this template](https://user-images.githubusercontent.com/896254/224554953-9819f73a-fdd1-4045-a183-dfa7d3601121.png)
+Instead of modifying it directly in my notebook, I will demonstrate how **groups can work in parallel** on GitHub. 
 
-2. Give your project a name and description. You can also choose to make the repository **private** if you wish. 
-    - Leave "Include all branches" unchecked.
+6. I will open a separate branch, dedicated to that issue, and then I will make my changes there and `git push`
+7. Then, I will open a [Pull Request](https://docs.github.com/en/pull-requests) and ask some of you to validate my changes.
+8. Once we got approval from you, I will `git merge` changes to `main`
+9. We will look at the `git` tree
+10. I will tell you about a common practice of using a `develop` vs a `main` branch.
 
-3. GitHub will copy the files from this repository into your new repository and it will trigger an **Actions** workflow. This workflow will customize labels (to include emojis!) as well as Issues and Pull Request templates for your project.
-    - If you are not familiar with GitHub Actions, you can read more about it [here](https://docs.github.com/en/actions).
+</details>
+  
+This whole process is a more professional set of practices for using Git and it is commonly known as the [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow.
 
-4. Clone your new repository to your computer and start working on it!
+</details>
 
-# First steps
+<details><summary><strong>Part TWO</strong></summary>
+  
+# Part TWO
 
-Once you have cloned your new repository to your computer, you might want to do the following:
+Now I will move my relevant code to a python script and I will invoke it _from_ the Jupyter notebook. **I will explain why and when it is good to do so.** Then, I will open a new issue with an exercise on data pre-processing. Everyone will now try to work out a solution for the exercise using Gitflow!
 
-1. Update the `README.md` file to remove all things related to this template and add information about your project.
+1. Branch from `develop` and give it a meaningful name.
+2. Push your branch to GitHub.
+3. Now work on your changes, commit and push them as you like.
+4. Once ready, open a pull request from your branch to `develop` and tag me (@jonjoncardoso) as a reviewer.
+5. I will review a few and add feedback notes on the spot.
+6. Hopefully, some of the solutions will be merged!
 
-2. Update the `LICENSE` file to reflect the license you want to use for your project. You can find a list of open-source licenses [here](https://choosealicense.com/).
+</details>
 
-3. Modify the name of the `src/python/pkg_name` folder to reflect the name of your project. You can also remove the `pkg_name` folder if you are not planning on using custom Python packages.
+<details><summary><strong>Part THREE</strong> (time allowing)</summary>
+  
+# Part THREE
 
-# More information
 
-Click on the links below to learn how to best use this template, and how to contribute to it.
-
-<details><summary>✋ How to contribute</summary>
-
-## ✋ How to contribute
-
-If you want to propose changes to the template, follow the steps below:
-
-1. Set up your environment by following the instructions in the [Dev Setup](#dev-setup) section.
-2. Create a new branch from `develop` and give it a meaningful name. Best practices involve using the following format: `<your-username>/<issue-number>-<short-description>`. For example, if you are working on issue #3, you could name your branch `jonjoncardoso/3-update-github-action`. Remember the [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow!
-3. Make your changes and commit them to your branch. Remember to commit often and to write meaningful commit messages. If you are working on a specific issue, you can use the following format: `<gitmoji> #<issue-number> <commit-message>`. For example, if you are working on issue #3, you could write `📝 #3 Update GitHub Action`. 
-    - To add emojis on Windows, just type `Win + .` and then select the emoji you want. On Mac, it's the world symbol `⌘ + Ctrl + Space`.
-    - You can find a list of gitmojis [here](https://gitmoji.dev/). If you are not sure what to write, you can use `📝` for documentation, `🐛` for bug fixes, `🌟` for new features, and `♻️` for refactoring. You can also use `🔧` for general changes. If you are not sure, just ask! 
-4. When you are done, push all your commits and then open a [pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) to merge your branch into `develop`. You can do this by clicking on the "Compare & pull request" button on GitHub. Make sure to add a meaningful title and description to your pull request. If you are working on a specific issue, you can use the following format: `#<issue-number> <pull-request-title>`. For example, if you are working on issue #3, you could write `#3 Update GitHub Action`. Mark @jonjoncardoso as a reviewer.
+- I will demonstrate the use of [GitHub projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects)
+- I will show you how I use [GitHub milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) and how I set deadlines in there.
+- I will show you how to [create your own Python package](https://www.pythoncentral.io/how-to-create-a-python-package/) and install it with `pip`.
 
 </details>
 
@@ -66,20 +79,18 @@ If you want to propose changes to the template, follow the steps below:
 
 ## 🧰 Dev Setup
 
-### 🐍 The Python setup
-
-1. Install [Python 3.9](python.org) or higher on your computer.
-2. Install [anaconda](https://www.anaconda.com/products/individual) or [miniconda](https://docs.conda.io/en/latest/miniconda.html) on your computer.
+1. Install [Python 3.8](python.org) or higher on your computer.
+2. Install [anaconda](https://www.anaconda.com/products/individual) or [miniconda](https://docs.conda.io/en/latest/miniconda.html) (lighter) on your computer.
 3. Create a new conda environment:
 
     ```bash
-    conda create -y -n=venv-ds-workflow python=3.10.8
+    conda create -y -n=venv-ds105 python=3.10.8
     ```
 4. Activate the environment and make sure you have `pip` installed inside that environment:
 
   ```console
   # the exact `activate` command will vary depending on your OS
-  conda activate venv-ds-workflow 
+  conda activate venv-ds105
   ```
 
 💡 Remember to activate this particular `conda` environment whenever you reopen VSCode/the terminal.
@@ -90,64 +101,10 @@ If you want to propose changes to the template, follow the steps below:
   pip install -r requirements.txt
   ```
 
-Now, whenever you open a Jupyter Notebook, you should see the `venv-ds-workflow` kernel available. You can also run `jupyter kernelspec list` to see all the kernels available on your computer.
-
-
-### 📊 The R setup
-
-1. Clone this repository to your computer.
-2. Open a terminal and navigate to the root of this repository.
-3. Ensure you have **R version 4.2.2** or higher
-4. Open the R console in this same directory and install `renv` package:
-```r
-install.packages("renv")
-```
-5. Run `renv::restore()` to install all the packages needed for this project
-
-### The Quarto setup
-
-If using quarto is not your thing, you can just ignore this section. If you want to use quarto, follow the steps below:
-
-1. Install [Quarto](https://quarto.org/docs/getting-started/installation.html) on your computer.
-2. Run the following command to start the website locally:
-    ```bash
-    quarto preview . --render all --no-browser
-    ```
-    This will read the instructions from `_quarto.yml` and render the website locally.
-5. Open your browser and navigate to `http://localhost:<port>/`. That's it!
+Now, whenever you open a Jupyter Notebook, you should see the `venv-ds105` kernel available. 
 
 </details>
+  
+# 👥 **Contributors**
 
-<details> <summary>⚒️ (Advanced) Jon's full setup</summary>
-
-## ⚒️ (Advanced) Jon's full setup
-
-I, [@jonjoncardoso](github.com/jonjoncardoso), like to use R on VSCode (WSL Ubuntu) instead of RStudio. It is a weird setup if you come from R, but it's a good setup for when you need to switch between R and Python all the time. Feel free to just ignore this stuff but if you want to replicate my setup, just follow the steps below:
-
-1. Install [VSCode](https://code.visualstudio.com/Download)
-2. Install [WSL on Windows](https://learn.microsoft.com/en-us/windows/wsl/install)
-3. Install [WSL extension on VSCode](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
-4. Open VSCode and open a new WSL window (Type `Ctrl+Shift+P` and type `WSL: New Window`)
-6. Open the Ubuntu terminal on VSCode and install [R](https://cloud.r-project.org/)
-
-**When doing R**
-
-7. Install the [R extension on VSCode](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r)
-8. Install [Quarto](https://quarto.org/docs/getting-started/installation.html)
-9. Install the [Quarto extension on VSCode](https://marketplace.visualstudio.com/items?itemName=quarto-dev.quarto-vscode)
-10. When running R notebooks (either `.Rmd` or `.qmd`) manually, you will see that some plots do not render with adequate size. To fix this, follow [these instructions](https://stackoverflow.com/a/70817205/843365).
-
-**When doing Python**
-
-11. Install the [Python extension on VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-12. Install the [Jupyter extension on VSCode](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
-
-I also use the following VSCode Extensions:
-
-- [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
-- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
-- [Grammarly](https://marketplace.visualstudio.com/items?itemName=znck.grammarly)
-
-</details>
-
+- [Dr. Jon Cardoso-Silva](http://github.com/jonjoncardoso) is DS105L's course convenour and creator of this exercise!
